@@ -1,0 +1,69 @@
+<!-- <i *ngIf="!castingStatus.casting" class="material-icons" (click)="openSession()"
+  >cast</i
+> -->
+
+<ion-row
+  justify-content-center
+  padding-top
+  *ngIf="!castingStatus.casting"
+  (click)="openSession()"
+>
+  <ion-col size-md="6" size-lg="4" size-xl="3">
+    <ion-button type="submit" expand="block" class="cast-button" size="large">
+      Cast to TV
+      <!--
+                Import custom SVG through Ionicons framework
+                https://www.joshmorony.com/custom-svg-icons-in-ionic-with-ionicons/
+              -->
+      <ion-icon
+        slot="start"
+        src="../../../assets/images/icons/cast.svg"
+        size="default"
+        class="cast-icon"
+      ></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
+
+<ion-row
+  justify-content-center
+  padding-top
+  *ngIf="castingStatus.casting"
+  (click)="closeSession()"
+>
+  <ion-col size-md="6" size-lg="4" size-xl="3">
+    <ion-button type="submit" expand="block" class="cast-button" size="large">
+      Stop Casting
+      <!--
+                Import custom SVG through Ionicons framework
+                https://www.joshmorony.com/custom-svg-icons-in-ionic-with-ionicons/
+              -->
+      <ion-icon
+        slot="start"
+        src="../../../assets/images/icons/cast.svg"
+        size="default"
+        class="cast-icon"
+      ></ion-icon>
+    </ion-button>
+  </ion-col>
+</ion-row>
+
+<ion-row
+  justify-content-center
+  padding-top
+  *ngIf="castingStatus.casting"
+  (click)="playImage()"
+>
+  <ion-col size-md="6" size-lg="4" size-xl="3">
+    <ion-button expand="block" class="cast-button">
+      Cast Image
+      <!--
+                Import custom SVG through Ionicons framework
+                https://www.joshmorony.com/custom-svg-icons-in-ionic-with-ionicons/
+              -->
+    </ion-button>
+  </ion-col>
+</ion-row>
+<!-- <i  class="material-icons" 
+  >cast_connected</i
+> -->

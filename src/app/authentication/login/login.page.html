@@ -1,0 +1,54 @@
+<div class="background-image">
+  <ion-grid fixed no-padding>
+    <ion-row class="vh-100" justify-content-center align-items-center>
+      <ion-col size-md="8" size-lg="6" size-xl="5">
+        <ion-img
+          class="brand-image"
+          src="../../../assets/images/branding/AppSplash.jpg"
+        ></ion-img>
+        <form [formGroup]="form" (ngSubmit)="submit(form)">
+          <div padding>
+            <ion-item class="transparent-input">
+              <ion-input
+                type="email"
+                placeholder="Email"
+                formControlName="email"
+                color="light"
+              ></ion-input>
+            </ion-item>
+            <ion-item margin-top class="transparent-input">
+              <ion-input
+                type="password"
+                placeholder="Password"
+                formControlName="password"
+                color="light"
+              ></ion-input>
+            </ion-item>
+          </div>
+          <div padding-horizontal>
+            <a class="custom-link" href="authentication/forgot-password"
+              >Forgot password?</a
+            >
+          </div>
+          <div padding>
+            <ion-button type="submit" expand="block" class="login-button">
+              Login
+              <ion-icon
+                slot="end"
+                name="log-in"
+                size="small"
+                class="login-icon"
+              ></ion-icon>
+            </ion-button>
+          </div>
+        </form>
+        <div padding-horizontal>
+          <a class="custom-link" href="authentication/register">
+            Don't have an account? Signup
+            <ion-icon class="signup-icon" name="arrow-forward"></ion-icon>
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

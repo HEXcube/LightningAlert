@@ -1,0 +1,45 @@
+.custom-toolbar {
+  --ion-color-secondary: tomato;
+}
+
+.cast-button {
+  --background: tomato;
+  --background-focused: orangered;
+  --background-activated: orangered;
+}
+
+.custom-toolbar {
+  --ion-color-secondary: tomato;
+}
+
+.cast-button {
+  --background: tomato;
+  --background-focused: orangered;
+  --background-activated: orangered;
+}
+
+.color-name {
+  text-transform: capitalize;
+}
+
+.color-item {
+  .purple {
+    color: purple;
+  }
+
+  .white {
+    color: lightgray;
+  }
+
+  .green {
+    color: green;
+  }
+
+  .blue {
+    color: blue;
+  }
+
+  .orange {
+    color: orange;
+  }
+}

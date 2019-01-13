@@ -9,3 +9,17 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+@import 'assets/sass//bootport/sizing.scss';
+
+ion-menu {
+  ion-toolbar .sidebar-logo {
+    line-height: 0;
+    max-width: 100%;
+    height: auto;
+  }
+
+  ion-content .sidebar-icon {
+    color: tomato;
+  }
+}
