@@ -1,5 +1,7 @@
 {
   "name": "precision-trainer-ionic-new",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
