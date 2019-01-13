@@ -38,10 +38,8 @@ export class AuthService {
     this.firebaseAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(value => {
-        console.log('logged in successfully', value);
-
         this.authenticated = true;
-        this.nav.navigateRoot(['pages']);
+        this.nav.navigateForward(['pages']);
         this.token = value;
       })
       .catch(err => {
@@ -64,7 +62,7 @@ export class AuthService {
       .then(() => {
         this.token = null;
         this.authenticated = false;
-        this.router.navigate(['authentication']);
+        this.nav.navigateRoot(['authentication']);
       })
       .catch(() => {
         console.log('error');

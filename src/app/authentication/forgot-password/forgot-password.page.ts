@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-forgot-password',
@@ -14,7 +15,8 @@ export class ForgotPasswordPage implements OnInit {
     private fb: FormBuilder,
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private nav: NavController
   ) {}
   ngOnInit() {
     this.form = this.fb.group({
@@ -23,13 +25,12 @@ export class ForgotPasswordPage implements OnInit {
   }
 
   onSubmit() {
-    console.log('event', this.form.value);
     const { email } = this.form.value;
     this.authService.resetPassword(email);
   }
 
   onLogin() {
-    this.router.navigate(['login'], { relativeTo: this.route.parent });
+    this.nav.goBack();
   }
 
   onRegister() {

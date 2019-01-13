@@ -46,8 +46,9 @@ export class AppComponent {
 
         if (firebaseUser) {
           console.log('its working here');
-          this.nav.navigateRoot('pages');
+          // this.router.navigate(['']);
           // this.router.navigate(['pages']);
+          this.nav.navigateForward(['pages']);
         }
       });
     });

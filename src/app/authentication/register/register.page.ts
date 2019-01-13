@@ -11,6 +11,7 @@ import { AuthService } from 'src/app/auth/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -30,14 +31,15 @@ export class RegisterPage implements OnInit {
     private router: Router,
     private af: AngularFirestore,
     private storage: AngularFireStorage,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private nav: NavController
   ) {}
 
   ngOnInit() {
     this.form = this.fb.group(
       {
-        name: ['', Validators.required],
-        id: ['', Validators.required],
+        // name: ['', Validators.required],
+        // id: ['', Validators.required],
         email: ['', Validators.required],
         password: ['', Validators.required],
         confirmPassword: ['', Validators.required]
@@ -76,7 +78,7 @@ export class RegisterPage implements OnInit {
         uid
       })
       .then(value => {
-        this.router.navigate(['']);
+        this.nav.navigateRoot(['pages']);
       });
   }
 
@@ -99,7 +101,7 @@ export class RegisterPage implements OnInit {
   }
 
   onLogin() {
-    this.router.navigate(['login'], { relativeTo: this.route.parent });
+    this.nav.goBack();
   }
 }
 

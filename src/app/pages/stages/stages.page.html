@@ -1,14 +1,21 @@
 <ion-header>
   <ion-toolbar color="secondary" class="custom-toolbar">
     <!-- <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons> -->
-    <!-- <ion-menu-toggle>
       <ion-button>
         <ion-icon slot="icon-only" name="menu"></ion-icon>
       </ion-button>
-    </ion-menu-toggle> -->
-    <ion-title>VAl</ion-title>
+    </ion-buttons> -->
+    <ion-menu-toggle>
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-menu-toggle>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Stages</ion-title>
   </ion-toolbar>
 </ion-header>
 

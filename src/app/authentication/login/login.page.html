@@ -26,7 +26,7 @@
             </ion-item>
           </div>
           <div padding-horizontal>
-            <a class="custom-link" href="authentication/forgot-password"
+            <a class="custom-link" (click)="onForgotPassword()"
               >Forgot password?</a
             >
           </div>
@@ -43,7 +43,7 @@
           </div>
         </form>
         <div padding-horizontal>
-          <a class="custom-link" href="authentication/register">
+          <a class="custom-link" (click)="onRegister()">
             Don't have an account? Signup
             <ion-icon class="signup-icon" name="arrow-forward"></ion-icon>
           </a>

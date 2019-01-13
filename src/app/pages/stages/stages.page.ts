@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, MenuController } from '@ionic/angular';
 import {
   AngularFirestoreCollection,
   AngularFirestore
 } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-stages',
@@ -17,7 +18,12 @@ export class StagesPage implements OnInit {
   private itemCollection: AngularFirestoreCollection<Image>;
   item: Observable<Image>;
 
-  constructor(private afs: AngularFirestore, private nav: NavController) {}
+  constructor(
+    private afs: AngularFirestore,
+    private nav: NavController,
+    private authService: AuthService,
+    public menuCtrl: MenuController
+  ) {}
 
   ngOnInit() {
     this.afs
@@ -36,6 +42,10 @@ export class StagesPage implements OnInit {
   goto(imageObj) {
     console.log('selected id', imageObj);
     this.nav.navigateForward(['pages', 'casting', imageObj.id]);
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }
 

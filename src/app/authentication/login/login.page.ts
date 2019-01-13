@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { MenuController } from '@ionic/angular';
+import { MenuController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -17,7 +17,8 @@ export class LoginPage implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private fb: FormBuilder,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    private nav: NavController
   ) {}
 
   ngOnInit() {
@@ -28,19 +29,16 @@ export class LoginPage implements OnInit {
   }
 
   submit(form: any) {
-    console.log(form.value);
     const { email, password } = form.value;
     this.authService.login(email, password);
   }
 
   onForgotPassword() {
-    this.router.navigate(['forgot-password'], {
-      relativeTo: this.route.parent
-    });
+    this.nav.navigateRoot(['authentication', 'forgot-password']);
   }
 
   onRegister() {
-    this.router.navigate(['register'], { relativeTo: this.route.parent });
+    this.nav.navigateRoot(['authentication', 'register']);
   }
 
   /*
