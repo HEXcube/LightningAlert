@@ -23,6 +23,7 @@ export class CastComponent implements OnInit {
 
     const ngCastService = this.ngCastService;
     window['__onGCastApiAvailable'] = function(isAvailable) {
+      console.log(isAvailable, this.ngCastService);
       if (isAvailable) {
         ngCastService.initializeCastApi();
       }
@@ -34,6 +35,7 @@ export class CastComponent implements OnInit {
   }
 
   openSession() {
+    console.log('nothing works');
     this.ngCastService.discoverDevices();
   }
 
