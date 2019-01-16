@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
-import { NavController } from '@ionic/angular';
+import { NavController, ToastController } from '@ionic/angular';
 
 @Injectable()
 export class AuthService {
@@ -13,11 +13,10 @@ export class AuthService {
   constructor(
     private firebaseAuth: AngularFireAuth,
     public router: Router,
-    private nav: NavController
+    private nav: NavController,
+    public toastController: ToastController
   ) {
     this.firebaseAuth.authState.subscribe(firebaseUser => {
-      console.log('user', firebaseUser);
-
       if (firebaseUser) {
         // this.nav.navigateForward(['..', 'pages']);
         // this.nav.navigateRoot(['pages']);
@@ -43,8 +42,16 @@ export class AuthService {
         this.token = value;
       })
       .catch(err => {
-        console.log('Something went wrong:', err.message);
+        this.presentToast(err.message);
       });
+  }
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message,
+      duration: 2000
+    });
+    toast.present();
   }
 
   createUser(email, password) {

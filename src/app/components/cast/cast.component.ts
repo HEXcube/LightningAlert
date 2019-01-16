@@ -7,7 +7,7 @@ import { CastService } from 'src/app/services/cast.service';
   styleUrls: ['./cast.component.scss']
 })
 export class CastComponent implements OnInit {
-  castingStatus: Object;
+  castingStatus: any;
   @Input() image: string;
 
   constructor(private ngCastService: CastService) {}
@@ -23,19 +23,15 @@ export class CastComponent implements OnInit {
 
     const ngCastService = this.ngCastService;
     window['__onGCastApiAvailable'] = function(isAvailable) {
-      console.log(isAvailable, this.ngCastService);
       if (isAvailable) {
         ngCastService.initializeCastApi();
       }
     };
 
     this.castingStatus = this.ngCastService.getStatus();
-
-    console.log('casting image', this.image);
   }
 
   openSession() {
-    console.log('nothing works');
     this.ngCastService.discoverDevices();
   }
 

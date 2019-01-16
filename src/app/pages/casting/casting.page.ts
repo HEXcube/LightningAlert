@@ -47,13 +47,10 @@ export class CastingPage implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    console.log('nav params', this.id);
     const imageDoc = this.afs.doc<any>(`Images/${this.id}`);
     imageDoc.snapshotChanges().subscribe(imageObj => {
-      console.log(imageObj);
       const id = imageObj.payload.id;
       const item: any = imageObj.payload.data();
-      console.log('items', item);
       this.thumbnail = item.Thumbnail;
       this.castingImage = item.Url;
     });

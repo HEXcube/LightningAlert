@@ -42,10 +42,7 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.firebaseAuth.authState.subscribe(firebaseUser => {
-        console.log('initializing', firebaseUser);
-
         if (firebaseUser) {
-          console.log('its working here');
           // this.router.navigate(['']);
           // this.router.navigate(['pages']);
           this.nav.navigateForward(['pages']);

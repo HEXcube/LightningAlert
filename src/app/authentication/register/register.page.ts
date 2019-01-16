@@ -49,7 +49,6 @@ export class RegisterPage implements OnInit {
   }
 
   onSubmit() {
-    console.log('event', this.form.value);
     const { name, email, password, id } = this.form.value;
 
     this.authService
@@ -59,7 +58,6 @@ export class RegisterPage implements OnInit {
         // this.addNewUser(email, name, id, uid);
       })
       .catch(err => {
-        console.log(err);
         this.errorMessage = err.message;
         setTimeout(() => {
           this.errorMessage = null;

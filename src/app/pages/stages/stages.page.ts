@@ -40,7 +40,6 @@ export class StagesPage implements OnInit {
   }
 
   goto(imageObj) {
-    console.log('selected id', imageObj);
     this.nav.navigateForward(['pages', 'casting', imageObj.id]);
   }
 
