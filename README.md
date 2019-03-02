@@ -1,4 +1,6 @@
-# Precision Rifle Trainer
+# Lightning Alert
+
+App to warn farmers about lightning strikes
 
 HOWTO
 =====
