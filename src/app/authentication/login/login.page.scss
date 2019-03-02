@@ -1,10 +1,10 @@
 .background-image {
   background-image: linear-gradient(
       to bottom,
-      rgba(black, 0.125),
-      rgba(black, 0.25)
+      rgba(black, 0),
+      rgba(black, 0.0625)
     ),
-    url('../../../assets/images/backgrounds/prism.png');
+    url('../../../assets/images/backgrounds/what-the-hex-dark.png');
   background-repeat: repeat;
   background-position: initial;
   background-size: initial;
@@ -29,7 +29,7 @@ ion-item.transparent-input {
 
 .custom-link {
   text-decoration: none;
-  color: coral;
+  color: dodgerblue;
   transition: 0.4s;
 
   &:hover {
@@ -44,9 +44,9 @@ ion-item.transparent-input {
 }
 
 .login-button {
-  --background: tomato;
-  --background-focused: orangered;
-  --background-activated: orangered;
+  --background: royalblue;
+  --background-focused: mediumblue;
+  --background-activated: mediumblue;
 
   .login-icon {
     margin-bottom: 0.125em;
