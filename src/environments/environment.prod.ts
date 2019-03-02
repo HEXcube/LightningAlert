@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: 'AIzaSyDoaQOU2xb_D6Omyvw13PGaDPs1WaI4dq8',
-    authDomain: 'precision-trainer.firebaseapp.com',
-    databaseURL: 'https://precision-trainer.firebaseio.com',
-    projectId: 'precision-trainer',
-    storageBucket: 'precision-trainer.appspot.com',
-    messagingSenderId: '687158631150'
+    apiKey: 'AIzaSyCWcmR_LdwsYH3K7WgmPIN2Cd4U6PONS-k',
+    authDomain: 'lightning-alert.firebaseapp.com',
+    databaseURL: 'https://lightning-alert.firebaseio.com',
+    projectId: 'lightning-alert',
+    storageBucket: 'lightning-alert.appspot.com',
+    messagingSenderId: '224662572143'
   }
 };
