@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "precision-trainer"
+    "default": "lightning-alert"
   }
 }

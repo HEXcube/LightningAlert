@@ -2,7 +2,7 @@
   "index": "/index.html",
   "assetGroups": [
     {
-      "name": "Precision Trainer",
+      "name": "Lightning Alert",
       "installMode": "prefetch",
       "resources": {
         "files": ["/favicon.ico", "/index.html", "/*.css", "/*.js"]

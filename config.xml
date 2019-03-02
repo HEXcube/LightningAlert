@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.precisionrifle.trainer" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Precision</name>
-    <description>Precision Rifle Trainer</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+<widget id="com.smarthackathon.lightningalert" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Lightning Alert</name>
+    <description>Lightning alert for farmers</description>
+    <author email="teamhypercubedcs@gmail.com" href="https://www.sih.gov.in/">Team HyperCube</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
