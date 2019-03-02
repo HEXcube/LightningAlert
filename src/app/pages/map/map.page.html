@@ -1,9 +1,24 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary" class="custom-toolbar">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <!-- <ion-menu-toggle>
+      <ion-button>
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>
+    </ion-menu-toggle> -->
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>Map</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <div id="map" style="width: 100%; height: 100%;"></div>
+<ion-content>
+  <div id="map" class="w-100 h-100"></div>
 </ion-content>
