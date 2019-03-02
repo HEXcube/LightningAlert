@@ -19,6 +19,7 @@
   <ion-text color="dark">
     <h5>Location</h5>
   </ion-text>
+
   <ion-list>
     <ion-radio-group>
       <ion-item lines="none">
@@ -65,18 +66,18 @@
   </ion-card>
 
   <ion-card>
-    <ion-item>
-      <ion-icon name="person" slot="start"></ion-icon>
-      <ion-label>Ramesh Shah</ion-label>
+    <ion-item padding-horizontal>
+      <ion-label position="floating">Enter Name</ion-label>
+      <ion-input clear-input></ion-input>
     </ion-item>
-  
-    <ion-item>
-      <ion-icon name="phone-portrait" slot="start"></ion-icon>
-      <ion-label>9XXX YYYYYY</ion-label>
+
+    <ion-item padding-horizontal>
+      <ion-label position="floating">Enter Phone</ion-label>
+      <ion-input clear-input type="tel"></ion-input>
     </ion-item>
 
     <ion-card-content>
-      <ion-button size="default" expand="block" slot="end">
+      <ion-button expand="block" slot="end">
         <ion-icon name="add-circle" slot="start"></ion-icon>
         <span>Add Contact</span>
       </ion-button>
