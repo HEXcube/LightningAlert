@@ -36,4 +36,27 @@
   <!-- Searchbar with a placeholder -->
   <ion-searchbar placeholder="Enter location"></ion-searchbar>
 
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-label>Ramesh Shah</ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="phone-portrait" slot="start"></ion-icon>
+      <ion-label>9XXX YYYYYY</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" class="custom-button-area">
+      <ion-button size="default" slot="start">
+        <ion-icon slot="start" name="create"></ion-icon>
+        <span>Edit</span>
+      </ion-button>
+      <ion-button size="default" slot="end" color="danger">
+        <ion-icon slot="start" name="trash"></ion-icon>
+        <span>Delete</span>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
 </ion-content>
