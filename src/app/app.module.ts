@@ -11,7 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AuthModule } from './auth/auth.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { CastComponent } from './components/cast/cast.component';
 
 @NgModule({
   declarations: [AppComponent],

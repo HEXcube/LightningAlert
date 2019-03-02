@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { NavParams } from '@ionic/angular';
 
 const routes = [
   {
     path: '',
-    redirectTo: 'stages',
+    redirectTo: 'map',
     pathMatch: 'full'
   },
   {
@@ -17,7 +16,8 @@ const routes = [
     path: 'preview',
     loadChildren: './preview/preview.module#PreviewPageModule'
   },
-  { path: 'stages', loadChildren: './stages/stages.module#StagesPageModule' }
+  { path: 'stages', loadChildren: './stages/stages.module#StagesPageModule' },
+  { path: 'map', loadChildren: './map/map.module#MapPageModule' }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes), CommonModule],
