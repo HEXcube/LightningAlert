@@ -5,9 +5,35 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button icon-end>
+        <b>Save</b>
+        <span>&nbsp;</span>
+        <ion-icon name="save"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-text color="dark">
+    <h5>Location</h5>
+  </ion-text>
+  <ion-list>
+    <ion-radio-group>
+      <ion-item lines="none">
+        <ion-label>Current: <b>Chandigarh</b></ion-label>
+        <ion-radio slot="start" value="auto" checked></ion-radio>
+      </ion-item>
+  
+      <ion-item lines="none">
+        <ion-label>Manually select location</ion-label>
+        <ion-radio slot="start" value="manual"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <!-- Searchbar with a placeholder -->
+  <ion-searchbar placeholder="Enter location"></ion-searchbar>
 
 </ion-content>
