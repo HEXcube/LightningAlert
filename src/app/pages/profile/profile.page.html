@@ -30,7 +30,7 @@
         <ion-label>Current: <b>Chandigarh</b></ion-label>
         <ion-radio slot="start" value="auto" checked></ion-radio>
       </ion-item>
-  
+
       <ion-item lines="none">
         <ion-label>Manually select location</ion-label>
         <ion-radio slot="start" value="manual"></ion-radio>
@@ -41,24 +41,24 @@
   <!-- Searchbar with a placeholder -->
   <ion-searchbar placeholder="Enter location"></ion-searchbar>
 
-
   <ion-text color="dark">
     <h5 class="custom-title">Family &amp; Friends</h5>
   </ion-text>
 
   <p>
-    In case of high alert, additional SMSs will be sent to the contacts you add here. Your contacts can then warn you if you're not directly reachable.
+    In case of high alert, additional SMSs will be sent to the contacts you add
+    here. Your contacts can then warn you if you're not directly reachable.
   </p>
 
-  <ion-card>
+  <ion-card *ngFor="let relative of relatives">
     <ion-item>
       <ion-icon name="person" slot="start"></ion-icon>
-      <ion-label>Ramesh Shah</ion-label>
+      <ion-label>{{ relative.name }}</ion-label>
     </ion-item>
-  
+
     <ion-item>
       <ion-icon name="phone-portrait" slot="start"></ion-icon>
-      <ion-label>9XXX YYYYYY</ion-label>
+      <ion-label>{{ relative.mobile }}</ion-label>
     </ion-item>
 
     <ion-item lines="none" class="custom-button-area">
@@ -114,5 +114,4 @@
       </ion-button>
     </ion-card-content>
   </ion-card>
-
 </ion-content>
