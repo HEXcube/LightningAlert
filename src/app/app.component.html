@@ -2,13 +2,15 @@
   <ion-split-pane>
     <ion-menu menuId="side-drawer">
       <ion-header>
-        <ion-toolbar> <ion-title>Menu</ion-title> </ion-toolbar>
+        <ion-toolbar no-padding>
+          <ion-img class="sidebar-logo" src="../../../assets/images/branding/sidebar-logo.svg"></ion-img>
+        </ion-toolbar>
       </ion-header>
       <ion-content>
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-icon slot="start" [name]="p.icon" class="sidebar-icon"></ion-icon>
               <ion-label> {{ p.title }} </ion-label>
             </ion-item>
           </ion-menu-toggle>
