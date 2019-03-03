@@ -11,7 +11,9 @@ export const environment = {
     projectId: 'lightning-alert',
     storageBucket: 'lightning-alert.appspot.com',
     messagingSenderId: '224662572143'
-  }
+  },
+  SMSServerUrl: 'http://localhost/8100/',
+  MLServerURL: ''
 };
 
 /*

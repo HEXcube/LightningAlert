@@ -3,6 +3,9 @@ import { Observable, of } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { NavController, ToastController } from '@ionic/angular';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class AuthService {
@@ -14,7 +17,9 @@ export class AuthService {
     private firebaseAuth: AngularFireAuth,
     public router: Router,
     private nav: NavController,
-    public toastController: ToastController
+    public toastController: ToastController,
+    private firestore: AngularFirestore,
+    private http: HttpClient
   ) {
     this.firebaseAuth.authState.subscribe(firebaseUser => {
       if (firebaseUser) {
@@ -37,9 +42,11 @@ export class AuthService {
     this.firebaseAuth.auth
       .signInWithEmailAndPassword(email, password)
       .then(value => {
+        this.token = value;
+      })
+      .then(() => {
         this.authenticated = true;
         this.nav.navigateForward(['pages']);
-        this.token = value;
       })
       .catch(err => {
         this.presentToast(err.message);
@@ -58,7 +65,13 @@ export class AuthService {
     // const credential = firebase.auth.EmailAuthProvider.credential(email, password);
     return this.firebaseAuth.auth
       .createUserWithEmailAndPassword(email, password)
-      .then(() => {
+      .then(data => {
+        this.firestore
+          .collection('Profiles')
+          .doc(data.user.uid)
+          .set({
+            uid: data.user.uid
+          });
         this.emailVerification();
       });
   }
@@ -101,5 +114,39 @@ export class AuthService {
     } catch (error) {
       return console.log(error);
     }
+  }
+
+  getHeaders() {
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return headers;
+  }
+
+  authThirdParties(uid) {}
+
+  authSMSServer(client) {
+    const options = {
+      headers: this.getHeaders()
+    };
+
+    console.log('client details in service', client);
+    return this.http
+      .post(`${environment.SMSServerUrl}/client`, { client }, options)
+      .subscribe(value => {
+        console.log('value', value);
+      });
+  }
+
+  authMLServer(client) {
+    const options = {
+      headers: this.getHeaders()
+    };
+
+    console.log('client details in service', client);
+    return this.http
+      .post(`${environment.MLServerURL}/client`, { client }, options)
+      .subscribe(value => {
+        console.log('value', value);
+      });
   }
 }
