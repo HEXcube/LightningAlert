@@ -9,28 +9,24 @@ import { MenuController } from '@ionic/angular';
 export class NotificationsPage implements OnInit {
   public listCards = [
     {
-      colorCode: 'green',
-      distance: '300 yds',
-      size: '18"x22"',
-      type: 'Half IPSC'
+      colorName: 'danger',
+      iconName: 'alert',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
     },
     {
-      colorCode: 'purple',
-      distance: '450 yds',
-      size: '18"x22"',
-      type: 'Half IPSC'
+      colorName: 'primary',
+      iconName: 'square',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
     },
     {
-      colorCode: 'white',
-      distance: '600 yds',
-      size: '18"x22"',
-      type: 'Half IPSC'
+      colorName: 'warning',
+      iconName: 'sunny',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
     },
     {
-      colorCode: 'blue',
-      distance: '850 yds',
-      size: '36"x44"',
-      type: 'Full IPSC'
+      colorName: 'primary',
+      iconName: 'square',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.'
     }
   ];
 
