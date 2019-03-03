@@ -99,16 +99,16 @@
   <ion-card>
     <ion-item padding-horizontal>
       <ion-label position="floating">Enter Name</ion-label>
-      <ion-input clear-input></ion-input>
+      <ion-input clear-input [(ngModel)]="name"></ion-input>
     </ion-item>
 
     <ion-item padding-horizontal>
       <ion-label position="floating">Enter Phone</ion-label>
-      <ion-input clear-input type="tel"></ion-input>
+      <ion-input clear-input type="tel" [(ngModel)]="mobile"></ion-input>
     </ion-item>
 
     <ion-card-content>
-      <ion-button expand="block" slot="end">
+      <ion-button expand="block" slot="end" (click)="addContact(name, mobile)">
         <ion-icon name="add-circle" slot="start"></ion-icon>
         <span>Add Contact</span>
       </ion-button>

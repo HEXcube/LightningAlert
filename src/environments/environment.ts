@@ -12,8 +12,10 @@ export const environment = {
     storageBucket: 'lightning-alert.appspot.com',
     messagingSenderId: '224662572143'
   },
-  SMSServerUrl: 'http://localhost/8100/',
-  MLServerURL: ''
+  SMSServerUrl: 'http://localhost:8100/',
+  MLServerURL: 'http://localhost:5000/',
+  darkSkyURL:
+    'https://api.darksky.net/forecast/f12d2349c8b1724ca4e693a295f29516/'
 };
 
 /*

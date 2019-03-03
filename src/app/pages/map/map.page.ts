@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { NavController, MenuController } from '@ionic/angular';
 import leaflet from 'leaflet';
+import { WeatherService } from 'src/app/services/weather.service';
+import { MlService } from 'src/app/services/ml.service';
 
 @Component({
   selector: 'app-map',
@@ -12,10 +14,14 @@ export class MapPage implements OnInit {
   map: any;
   constructor(
     private nav: NavController,
-    public menuCtrl: MenuController
+    public menuCtrl: MenuController,
+    private weather: WeatherService,
+    private ml: MlService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.ml.getPrediction();
+  }
 
   /*
     Re-enable sidebar (It was disabled in login page)
@@ -69,6 +75,8 @@ export class MapPage implements OnInit {
         markerGroup.addLayer(circle);
         markerGroup.addLayer(circle2);
         this.map.addLayer(markerGroup);
+
+        // this.weather.getCurrentWeatherDetails(e.latitude, e.longitude);
       })
       .on('locationerror', err => {
         alert(err.message);
