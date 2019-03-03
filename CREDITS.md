@@ -9,6 +9,10 @@ Login page background
 ---------------------
 https://www.toptal.com/designers/subtlepatterns/what-the-hex-dark/ - by Angel Micevski
 
+Android icons
+-------------
+Generated using https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
+
 Splash screens and iOS icons
 -----------------------------
 Generated using https://www.resource-generator.com

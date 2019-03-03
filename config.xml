@@ -21,7 +21,6 @@
     <preference name="SplashScreenDelay" value="3000" />
     <platform name="android">
         <allow-intent href="market:*" />
-        <icon density="ldpi" src="resources/android/icon/mipmap-ldpi/ic_launcher.png" />
         <icon density="mdpi" src="resources/android/icon/mipmap-mdpi/ic_launcher.png" />
         <icon density="hdpi" src="resources/android/icon/mipmap-hdpi/ic_launcher.png" />
         <icon density="xhdpi" src="resources/android/icon/mipmap-xhdpi/ic_launcher.png" />
