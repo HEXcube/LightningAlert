@@ -39,8 +39,12 @@
 
 
   <ion-text color="dark">
-    <h5>Family &amp; Friends</h5>
+    <h5 class="custom-title">Family &amp; Friends</h5>
   </ion-text>
+
+  <p>
+    In case of high alert, additional SMSs will be sent to the contacts you add here. Your contacts can then warn you if you're not directly reachable.
+  </p>
 
   <ion-card>
     <ion-item>
@@ -61,6 +65,29 @@
       <ion-button size="default" slot="end" color="danger">
         <ion-icon slot="start" name="trash"></ion-icon>
         <span>Delete</span>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item padding-horizontal>
+      <ion-label position="floating">Edit Name</ion-label>
+      <ion-input clear-input value="Ramesh Shah"></ion-input>
+    </ion-item>
+
+    <ion-item padding-horizontal>
+      <ion-label position="floating">Edit Phone</ion-label>
+      <ion-input clear-input value="9XXX 7YYYYY" type="tel"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="custom-button-area">
+      <ion-button size="default" slot="start">
+        <ion-icon slot="start" name="checkmark"></ion-icon>
+        <span>Edit</span>
+      </ion-button>
+      <ion-button size="default" slot="end" color="warning">
+        <ion-icon slot="start" name="close"></ion-icon>
+        <span>Cancel</span>
       </ion-button>
     </ion-item>
   </ion-card>
