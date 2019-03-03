@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { NavController, MenuController } from '@ionic/angular';
 import leaflet from 'leaflet';
 
 @Component({
@@ -9,9 +10,24 @@ import leaflet from 'leaflet';
 export class MapPage implements OnInit {
   @ViewChild('map') mapContainer: ElementRef;
   map: any;
-  constructor() {}
+  constructor(
+    private nav: NavController,
+    public menuCtrl: MenuController
+  ) {}
 
   ngOnInit() {}
+
+  /*
+    Re-enable sidebar (It was disabled in login page)
+    https://ionicframework.com/docs/api/menu
+  */
+  ionViewWillEnter() {
+    this.menuCtrl.enable(true, 'side-drawer');
+  }
+
+  openSideDrawer() {
+    this.menuCtrl.open('side-drawer');
+  }
 
   ionViewDidEnter() {
     this.loadmap();

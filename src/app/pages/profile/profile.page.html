@@ -1,0 +1,114 @@
+<ion-header>
+  <ion-toolbar color="secondary" class="custom-toolbar">
+    <ion-buttons slot="start">
+      <!-- <ion-menu-button></ion-menu-button> -->
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end">
+      <ion-button icon-end>
+        <b>Save</b>
+        <span>&nbsp;</span>
+        <ion-icon name="save"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-text color="dark">
+    <h5>Location</h5>
+  </ion-text>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-item lines="none">
+        <ion-label>Current: <b>Chandigarh</b></ion-label>
+        <ion-radio slot="start" value="auto" checked></ion-radio>
+      </ion-item>
+  
+      <ion-item lines="none">
+        <ion-label>Manually select location</ion-label>
+        <ion-radio slot="start" value="manual"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <!-- Searchbar with a placeholder -->
+  <ion-searchbar placeholder="Enter location"></ion-searchbar>
+
+
+  <ion-text color="dark">
+    <h5 class="custom-title">Family &amp; Friends</h5>
+  </ion-text>
+
+  <p>
+    In case of high alert, additional SMSs will be sent to the contacts you add here. Your contacts can then warn you if you're not directly reachable.
+  </p>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="person" slot="start"></ion-icon>
+      <ion-label>Ramesh Shah</ion-label>
+    </ion-item>
+  
+    <ion-item>
+      <ion-icon name="phone-portrait" slot="start"></ion-icon>
+      <ion-label>9XXX YYYYYY</ion-label>
+    </ion-item>
+
+    <ion-item lines="none" class="custom-button-area">
+      <ion-button size="default" slot="start">
+        <ion-icon slot="start" name="create"></ion-icon>
+        <span>Edit</span>
+      </ion-button>
+      <ion-button size="default" slot="end" color="danger">
+        <ion-icon slot="start" name="trash"></ion-icon>
+        <span>Delete</span>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item padding-horizontal>
+      <ion-label position="floating">Edit Name</ion-label>
+      <ion-input clear-input value="Ramesh Shah"></ion-input>
+    </ion-item>
+
+    <ion-item padding-horizontal>
+      <ion-label position="floating">Edit Phone</ion-label>
+      <ion-input clear-input value="9XXX 7YYYYY" type="tel"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" class="custom-button-area">
+      <ion-button size="default" slot="start">
+        <ion-icon slot="start" name="checkmark"></ion-icon>
+        <span>Edit</span>
+      </ion-button>
+      <ion-button size="default" slot="end" color="warning">
+        <ion-icon slot="start" name="close"></ion-icon>
+        <span>Cancel</span>
+      </ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item padding-horizontal>
+      <ion-label position="floating">Enter Name</ion-label>
+      <ion-input clear-input></ion-input>
+    </ion-item>
+
+    <ion-item padding-horizontal>
+      <ion-label position="floating">Enter Phone</ion-label>
+      <ion-input clear-input type="tel"></ion-input>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-button expand="block" slot="end">
+        <ion-icon name="add-circle" slot="start"></ion-icon>
+        <span>Add Contact</span>
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -17,7 +17,8 @@ const routes = [
     loadChildren: './preview/preview.module#PreviewPageModule'
   },
   { path: 'stages', loadChildren: './stages/stages.module#StagesPageModule' },
-  { path: 'map', loadChildren: './map/map.module#MapPageModule' }
+  { path: 'map', loadChildren: './map/map.module#MapPageModule' },
+  { path: 'profile', loadChildren: './profile/profile.module#ProfilePageModule' }
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes), CommonModule],
