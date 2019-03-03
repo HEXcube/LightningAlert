@@ -12,6 +12,7 @@ export class AuthService {
   user = { isAdmin: false };
   token: any;
   authenticated = false;
+  uid: Observable<string>;
 
   constructor(
     private firebaseAuth: AngularFireAuth,
@@ -23,6 +24,7 @@ export class AuthService {
   ) {
     this.firebaseAuth.authState.subscribe(firebaseUser => {
       if (firebaseUser) {
+        this.uid = of(firebaseUser.uid);
         // this.nav.navigateForward(['..', 'pages']);
         // this.nav.navigateRoot(['pages']);
         this.authenticated = true;
