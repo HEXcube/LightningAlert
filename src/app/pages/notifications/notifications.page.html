@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="secondary" class="custom-toolbar">
+    <ion-buttons slot="start" [routerLink]="['/pages/map']">
+      <ion-button>
+        <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Notifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed no-padding>
+    <ion-row justify-content-center padding-vertical>
+      <ion-col
+        size="12"
+        size-md="6"
+        size-lg="4"
+        size-xl="3"
+        *ngFor="let card of listCards"
+      >
+        <ion-card no-margin>
+          <ion-item lines="none">
+            <ion-icon
+              slot="start"
+              [name]="card.iconName"
+              [color]="card.colorName"
+              size="large"
+            ></ion-icon>
+            <ion-text color="dark" text-justify>
+              <p>{{ card.description }}</p>
+            </ion-text>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -21,7 +21,12 @@ export class AppComponent {
     {
       title: 'Profile',
       url: '/pages/profile',
-      icon: 'list'
+      icon: 'person'
+    },
+    {
+      title: 'Notifications',
+      url: '/pages/notifications',
+      icon: 'notifications'
     }
   ];
 

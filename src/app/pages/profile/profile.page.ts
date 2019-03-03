@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+
+import { MenuController } from '@ionic/angular';
+
 import { Observable } from 'rxjs';
 import { AngularFirestore, CollectionReference } from '@angular/fire/firestore';
 import { AuthService } from 'src/app/auth/auth.service';
@@ -14,7 +17,11 @@ export class ProfilePage implements OnInit {
   _profile: any;
   _relatives: any;
 
-  constructor(private afs: AngularFirestore, private auth: AuthService) {
+  constructor(
+    private afs: AngularFirestore,
+    private auth: AuthService,
+    public menuCtrl: MenuController
+  ) {
     // this.itemsCollection = afs.collection<Profile>('Profiles').doc();
     // this.items = this.itemsCollection.valueChanges();
   }
@@ -51,6 +58,13 @@ export class ProfilePage implements OnInit {
   }
 
   updateContact(update_name: string, update_mobile: string) {}
+  /*
+    Disable sidebar
+    https://stackoverflow.com/questions/51610075/disable-menu-on-login-page-ionic-4/51637860#51637860
+  */
+  ionViewWillEnter() {
+    this.menuCtrl.enable(false);
+  }
 }
 
 export interface Profile {

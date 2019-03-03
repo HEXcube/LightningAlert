@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { StagesPage } from './stages.page';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NotificationsPage } from './notifications.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: StagesPage
+    component: NotificationsPage
   }
 ];
 
@@ -20,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    AngularFirestoreModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [StagesPage]
+  declarations: [NotificationsPage]
 })
-export class StagesPageModule {}
+export class NotificationsPageModule {}
