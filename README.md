@@ -1,6 +1,6 @@
 # Lightning Alert
 
-App to warn farmers about lightning strikes, developed at [Smart India Hackathon 2019](https://sih.gov.in/sih2019).
+Mobile app part of the project to warn farmers about lightning strikes, developed at [Smart India Hackathon 2019](https://sih.gov.in/sih2019).
 
 
 HOWTO
